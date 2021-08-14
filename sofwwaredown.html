@@ -28,7 +28,7 @@
               <li>小坑</li>
             </a>
             <a href="sofwwaredown.html">
-              <li>软件下载</li>
+              <li>工具</li>
             </a>
             <a href="project.html">
               <li>项目</li>
@@ -58,13 +58,7 @@
   <div class="item-type">
     <div class="column-item layui-row">
       <div class="column-item-title layui-row subject-color font-color1 font-bold">栏目简介</div>
-      <div class="jianjie-p layui-row">这是博客当前栏目的简介信息，此处是技术文章栏目，主要分享一些编程技术或者知识点，以及一些Exception和莫名其妙的文章。</div>
-    </div>
-    <div class="column-item layui-row">
-      <div class="column-item-title layui-row subject-color font-color1 font-bold">栏目文章分类</div>
-      <ul class="column-item-ul">
-        <a href="#"><li>Java<span>0篇</span></li></a>
-      </ul>
+      <div class="jianjie-p layui-row">这里主要介绍一些基本软件的使用，软件安装等方法，已便于更好的写程序，调试代码，提高效率。</div>
     </div>
   </div>
   <div class="item-list">
@@ -72,11 +66,11 @@
       <li>
         <div class="article-list-row layui-row">
           <div class="article-li-title layui-row">
-            <h3 class="font-bold layui-elip"><a href="#">每个强者都会有背后的辛酸挫折每个强者都会有背后的辛酸挫折</a></h3>
+            <h3 class="font-bold layui-elip"><a href="software/Markdown.html" target="_blank">markdown语法的基本使用，及软件的基本使用（typora）</a></h3>
           </div>
-          <div class="article-li-msg"><p>Windows 10将会让搜索和使用信息更加简单，包括本地、网络和互联网搜索功能,直观的用户体验将更 加高级,还会整合自动化应用程序提交和交叉程序数据透明性。 Windows 10 操作系统改进了基于角色的计算方案和用户账户管理,在数据保护和坚固协作的固有冲突之方案和用户账户管理,在数据保护和坚固协作的固有冲间</p></div>
+          <div class="article-li-msg"><p>markdown是当前比较流行的记录学习内容的文本工具，而typora软件使markdown的使用更加便捷</p></div>
           <div class="article-li-param layui-row">
-            2019-01-17 11:05
+            2021-08-14 16:18
           </div>
         </div>
       </li>
@@ -102,7 +96,7 @@
     //执行一个laypage实例
     laypage.render({
       elem: 'pageItem', //注意，这里的 test1 是 ID，不用加 # 号
-      count: 50, //数据总数，从服务端得到
+      count: 1, //数据总数，从服务端得到
       jump: function(obj, first){
         //obj包含了当前分页的所有参数，比如：
         console.log('当前页数：'+obj.curr); //得到当前页，以便向服务端请求对应页的数据。
