@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>栏目文章列表-聚繁</title>
+  <link rel="stylesheet" href="plugin/layui/css/layui.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<header>
+  <div class="layui-row subject-color nav-row">
+    <div class="main-content nav-menu">
+      <div class="layui-row">
+        <div class="layui-col-md2 logo-box">
+          <a href="#" title="首页">
+            <div class="wel">welcome to ly's home</div>
+          </a>
+        </div>
+        <div class="layui-col-md7 menu-box">
+          <ul class="menu-ul">
+            <a href="index.html">
+              <li>首页</li>
+            </a>
+            <a href="tech.html">
+              <li>技术</li>
+            </a>
+            <a href="exper.html">
+              <li>随笔</li>
+            </a>
+            <a href="software.html">
+              <li>工具</li>
+            </a>
+            <a href="project.html">
+              <li>项目</li>
+            </a>
+            <a href="about.html" target="_blank">
+              <li>关于我</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="main-content item-box" style="height: 800px">
+  <div class="item-type">
+    <div class="column-item layui-row">
+      <div class="column-item-title layui-row subject-color font-color1 font-bold">栏目简介</div>
+      <div class="jianjie-p layui-row">这里主要介绍一些基本软件的使用，软件安装等方法，已便于更好的写程序，调试代码，提高效率。</div>
+    </div>
+  </div>
+  <div class="item-list">
+    <ul class="article-ul">
+      <li>
+        <div class="article-list-row layui-row">
+          <div class="article-li-title layui-row">
+            <h3 class="font-bold layui-elip"><a href="software/Markdown.html" target="_blank">markdown语法的基本使用，及软件的基本使用（typora）</a></h3>
+          </div>
+          <div class="article-li-msg"><p>markdown是当前比较流行的记录学习内容的文本工具，而typora软件使markdown的使用更加便捷</p></div>
+          <div class="article-li-param layui-row">
+            2021-08-14 16:18
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <div class="page-box layui-row">
+      <div id="pageItem"></div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-box">
+    <div class="main-content" style="text-align: center">
+      <strong>Copyright</strong> &nbsp;2021.08.10  </span>
+    </div>
+  </div>
+</footer>
+<script src="plugin/layui/layui.js"></script>
+<script>
+  layui.use('laypage', function(){
+    var laypage = layui.laypage;
+
+    //执行一个laypage实例
+    laypage.render({
+      elem: 'pageItem', //注意，这里的 test1 是 ID，不用加 # 号
+      count: 1, //数据总数，从服务端得到
+      jump: function(obj, first){
+        //obj包含了当前分页的所有参数，比如：
+        console.log('当前页数：'+obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+        console.log('每页数量：'+obj.limit); //得到每页显示的条数
+        //首次不执行
+        if(!first){
+          console.log('执行')
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
